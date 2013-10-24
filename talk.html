@@ -8,6 +8,12 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800" rel="stylesheet" type="text/css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="talk.css" rel="stylesheet" />
+    <link rel="stylesheet" href="highlight.js/styles/monokai.css">
+    <script src="highlight.js/highlight.pack.js"></script>
+    <script>
+      hljs.tabReplace = '    ';
+      hljs.initHighlightingOnLoad();
+    </script>
   </head>
   <body class="impress-not-supported">
     <div id="impress">
@@ -49,7 +55,14 @@
       <div class="step slide scaling" data-x="0" data-y="7500" data-rotate="180">
         <h1>TUTORIAL</h1>
         <pre>
-        <code></code>
+          <code class="python">
+TEMPLATE_CONTEXT_PROCESSORS = (
+    ...
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+    ...
+)
+          </code>
         </pre>
         <!--como usar python social auth-->
         <!--screens de las apps-->
