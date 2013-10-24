@@ -133,3 +133,11 @@ video {
     margin-top: 30px;
     width: 100%;
 }
+
+code{
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    border:5px solid #bbb;
+    font-size:24px;
+}
