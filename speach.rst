@@ -87,14 +87,13 @@ Features:
         - AOL
         - Appsfuel
         - Behance
-        - Belgiumeid
+        - BelgiumEIDOpenId
         - Bitbucket
         - Box
         - Dailymotion
         - Disqus
         - Douban
         - Dropbox
-        - Email
         - Evernote
         - Exacttarget
         - Facebook
@@ -107,7 +106,6 @@ Features:
         - Google
         - Instagram
         - Jawbone
-        - Legacy
         - Linkedin
         - Livejournal
         - Live
@@ -135,7 +133,6 @@ Features:
         - Tumblr
         - Twilio
         - Twitter
-        - Username
         - vkontakte 
         - Weibo
         - Xing
