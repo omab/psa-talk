@@ -7,13 +7,8 @@
     <meta name="author" content="Matías Aguirre y Martin Santos" />
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800" rel="stylesheet" type="text/css">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="talk.css" rel="stylesheet" />
     <link rel="stylesheet" href="highlight.js/styles/monokai.css">
-    <script src="highlight.js/highlight.pack.js"></script>
-    <script>
-      hljs.tabReplace = '    ';
-      hljs.initHighlightingOnLoad();
-    </script>
+    <link rel="stylesheet/less" type="text/css" href="less/styles.less">
   </head>
   <body class="impress-not-supported">
     <div id="impress">
@@ -110,6 +105,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     </div>
 
     <script src="impress.js"></script>
+    <script src="less.js"></script>
+    <script src="highlight.js/highlight.pack.js"></script>
     <script>impress().init();</script>
+    <script>hljs.tabReplace = '    '; hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
