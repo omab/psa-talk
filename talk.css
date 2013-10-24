@@ -20,10 +20,22 @@ time, mark, audio, video {
 }
 
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    line-height: 1.5;
     min-height: 740px;
-
     background: rgb(215, 215, 215);
+}
+
+.bold-font {
+    line-height: .8;
+    font-weight: 800;
+    font-size: 85px;
+}
+
+span.bold-font {
+    font-weight: 500;
+    font-size: 40px;
 }
 
 a {
@@ -49,6 +61,7 @@ a:focus {
 
 h1 {
     font-size: 100px;
+    text-align: center;
 }
 
 .step {
@@ -60,9 +73,6 @@ h1 {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'PT Serif', georgia, serif;
-    font-size: 48px;
-    line-height: 1.5;
 }
 
 .impress-enabled .step {
