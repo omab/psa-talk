@@ -65,7 +65,7 @@ h1 {
 }
 
 .step {
-    width: 970px;
+    width: 1280px;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -127,4 +127,9 @@ h1 {
 
 .center {
     text-align: center;
+}
+
+video {
+    margin-top: 30px;
+    width: 100%;
 }
