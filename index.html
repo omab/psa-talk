@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>django-social-auth is dead, long live to python-social-auth</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="django-social-auth is dead, long live to python-social-auth" />
+    <meta name="author" content="Matías Aguirre y Martin Santos" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,400,800" rel="stylesheet" type="text/css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="less/styles.less">
+  </head>
+  <body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h1>django-social-auth</h1>
+          <div id="middle">is dead, long live to</div>
+          <h1>python-social-auth</h1>
+
+          <p>
+            <span>Martín Santos <br/> <a href="https://github.com/san-mate"><i class="icon-github"></i> san-mate</a></span>
+            <span>Matías Aguirre <br/> <a href="https://github.com/omab"><i class="icon-github"></i> omab</a></span>
+          </p>
+        </section>
+
+        <section>
+          <h1>Django Social Auth (DSA)</h1>
+          <ul>
+            <li>Propósito</li>
+            <li>Números</li>
+            <li>Features</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Django Social Auth (DSA) - Proposito</h1>
+
+          <p>Solucionar el problema del autenticado y autorización mediante el uso de
+             redes sociales que soportan los protocolos OAuth1, OAuth2 y OpenId.</p>
+
+          <p>Surge como resultado de horas de frustración al intentar utilizar otras
+             soluciones disponibles.</p>
+        </section>
+
+        <section>
+          <h1>Django Social Auth (DSA) - Números</h1>
+
+          <p>Nace el 8 de Noviembre de 2010 y muere el 5 de Octubre de 2013 con un total
+             de 1605 commits, 9614 líneas de código, 165 aportes, 751 issues cerrados,
+             674 forks, 1990 stars y 116 watchers.</p>
+        </section>
+
+        <section>
+          <h1>Django Social Auth (DSA) - Features</h1>
+
+          <ul>
+            <li>Django ORM y Mongoengine</li>
+            <li>Registro de datos básicos del usuario al momento de registrarse</li>
+            <li>Múltiple cuentas sociales asociadas a un único usuario</li>
+            <li>Modelo de usuario configurable</li>
+            <li>Pipeline extensible utilizado al momento del autenticado o asociación</li>
+            <li>
+              Variedad de sitios sociales soportados:
+              Google (OpenID, OAuth, OAuth2), Yahoo, Twitter, Facebook, DISQUS, LiveJournal, Orkut, Linkedin, Foursquare, GitHub, Dropbox, Flickr, Vkontakte, MSN Live Connect, Skyrock, Yahoo, Evernote, Mail.ru, Odnoklassniki, Mixcloud, BitBucket, Douban, Fitbit, Instagram, Twilio, Trello, Weibo, Yandex, Shopify, StockTwits, Stackoverflow, Fedora, Exacttarget HubExchange, Appsfuel
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <span class="bold-font" style="letter-spacing: 21px;">FRAMEWORKS + BACKENDS</span>
+          <h1 class="bold-font">PYTHON SOCIAL AUTH</h1>
+          <span class="bold-font" style="font-size: 50px;">(PSA)</span>
+        </section>
+
+        <section>
+          <h1 class="bold-font">PSA EN ACCION</h1>
+          <!-- video -->
+          <video controls autoplay>
+            <source src="example.ogv" type="video/ogg">
+          </video>
+        </section>
+
+        <section>
+          <h1>DETRAS DE CAMARAS</h1>
+          <!--flujo de los requests-->
+        </section>
+
+        <section>
+          <h1>TUTORIAL</h1>
+          <pre>
+            <code class="python">
+              TEMPLATE_CONTEXT_PROCESSORS = (
+                  ...
+                  'social.apps.django_app.context_processors.backends',
+                  'social.apps.django_app.context_processors.login_redirect',
+                  ...
+              )
+            </code>
+          </pre>
+          <!--como usar python social auth-->
+          <!--screens de las apps-->
+          <!--codigo-->
+        </section>
+
+        <section>
+          <h1>django-social-auth</h1>
+          <div id="middle">is dead, long live to</div>
+          <h1>python-social-auth</h1>
+          <!--explicacion de porque murio, o como fue que muto-->
+          <ul>
+            <li>Proposito</li>
+            <li>Features</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Como agregar soporte para un framework</h1>
+        </section>
+
+        <section>
+          <h1>Tornado is alive!</h1>
+        </section>
+
+        <section>
+          <h1>Conclusiones</h1>
+        </section>
+      </div>
+    </div>
+
+		<script src="js/head.min.js"></script>
+		<script src="js/classlist.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="js/less.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        dependencies: [{
+          src: 'js/plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        }]
+      });
+    </script>
+  </body>
+</html>
