@@ -9,72 +9,24 @@ span.bold-font {
     font-size: 40px;
 }
 
-.step {
-    width: 1024px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    -ms-box-sizing:     border-box;
-    -o-box-sizing:      border-box;
-    box-sizing:         border-box;
-
-}
-
-.impress-enabled {
-    .step {
-        margin: 0;
-        opacity: 0;
-
-        -webkit-transition: opacity 1s;
-        -moz-transition:    opacity 1s;
-        -ms-transition:     opacity 1s;
-        -o-transition:      opacity 1s;
-        transition:         opacity 1s;
-
-        &.active {
-            opacity: 1;
-        }
-    }
-}
-
-.present.scaling {
-    -webkit-transform: scale(0.7);
-    -moz-transform:    scale(0.7);
-    -ms-transform:     scale(0.7);
-    -o-transform:      scale(0.7);
-    transform:         scale(0.7);
-
-    -webkit-transition-delay: 0.5s;
-    -moz-transition-delay:    0.5s;
-    -ms-transition-delay:     0.5s;
-    -o-transition-delay:      0.5s;
-    transition-delay:         0.5s;
-}
-
-#middle {
-    margin-top: 30px;
-}
-
 #first {
     p {
-        margin-top: 40px;
-        padding: 0 100px;
+        padding: 0 170px;
 
         span {
             &:first-child {
-                font-size: 30px;
                 float: left;
             }
 
             &:nth-child(2) {
-                font-size: 30px;
                 float: right;
             }
-
-            a {
-                padding: 5px 10px;
-            }
         }
+    }
+
+    div {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 
