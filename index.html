@@ -264,11 +264,8 @@ INSTALLED_APPS = (
     ...
 )
             </code></pre>
-          </section>
 
-          <section>
-            <span>settings.py</span>
-            <pre><code data-trim class="python">
+            <pre class="fragment"><code data-trim class="python">
 AUTHENTICATION_BACKENDS = (
     'social.backends.google.GoogleOAuth2',
     'social.backends.facebook.FacebookOAuth2',
@@ -277,23 +274,16 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
             </code></pre>
-            <h3>Strategy</h3>
-          </section>
 
-          <section>
-            <span>settings.py</span>
-            <pre><code data-trim class="python">
+            <pre class="fragment"><code class="python">
+SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
+SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
+            </code></pre>
+
+            <pre class="fragment"><code data-trim class="python">
 SOCIAL_AUTH_FACEBOOK_KEY = 'foobar'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'bazqux'
             </code></pre>
-          </section>
-
-          <section>
-            <span>settings.py</span>
-            <pre><code class="python">
-SOCIAL_AUTH_STORAGE = 'social.apps.django_app.me.models.DjangoStorage'
-            </code></pre>
-            <h3>Storage</h3>
           </section>
 
           <section>
