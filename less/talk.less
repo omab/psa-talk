@@ -1,32 +1,24 @@
-.bold-font {
-    line-height: .8;
-    font-weight: 800;
-    font-size: 85px;
-}
-
-span.bold-font {
-    font-weight: 500;
-    font-size: 40px;
-}
-
 #first {
-    p {
-        padding: 0 290px;
-
-        span {
-            &:first-child {
-                float: left;
-            }
-
-            &:nth-child(2) {
-                float: right;
-            }
-        }
-    }
-
     div {
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+
+    #github-handles {
+        @sep: 30px;
+
+        span {
+            display: inline-block;
+            text-align: left;
+
+            &:first-child {
+                margin-right: @sep;
+            }
+
+            &:last-child {
+                margin-left: @sep;
+            }
+        }
     }
 }
 
@@ -40,6 +32,33 @@ pre {
     width: 80% !important;
 }
 
+.backends {
+    img {
+        max-width: 200px;
+    }
+}
+
 .reveal section img {
     border: 0px;
+    background: none;
+    box-shadow: none;
+}
+
+.settings {
+    pre {
+        margin: 0px auto;
+        box-shadow: none;
+        border-top: 0px !important;
+        border-bottom: 0px !important;
+
+        &.installed-apps {
+            margin-top: 15px;
+            border-top: 2px solid #bbb !important;
+        }
+
+        &:last-child {
+            margin-bottom: 15px;
+            border-bottom: 2px solid #bbb !important;
+        }
+    }
 }
