@@ -316,6 +316,21 @@
           }
         }]
       });
+
+      Reveal.addEventListener('fragmentshown', function (event) {
+          if (event.fragment.nodeName == 'IMG') {
+            var img = event.fragment,
+                x = document.body.offsetHeight - img.height - 100,
+                y = document.body.offsetWidth - img.width - 100,
+                randomx = Math.floor(Math.random() * x + 1),
+                randomy = Math.floor(Math.random() * y + 1);
+
+            img.style.float = 'left';
+            img.style.position = 'fixed';
+            img.style.top = randomx + 'px';
+            img.style.left = randomy + 'px';
+          }
+      });
     </script>
   </body>
 </html>
