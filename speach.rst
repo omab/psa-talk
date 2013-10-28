@@ -152,3 +152,29 @@ en ese momento nuestro servidor redirecciona a la url de login correspondiente
 al provider seleccionado. Una vez que el usuario autentifica en el sitio, este
 nos trae de regreso a la url de complete, y por ultimo social auth hace otra
 redireccion a la url post login definida en las settings.
+
+Diapositiva 5 (Tutorial)
+------------------------
+
+El primer paso es instalarlo.
+Lo siguente es configurar nuestra aplicacion para que use psa.
+* Agregar la aplicacion a las installed apps.
+* Agregar los backends de autenticacion a utilizar.
+  Estos "backends" son las diferentes estrategias que psa utiliza.
+* Se registra la aplicacion en facebook, para obtener acceso a las llamadas de
+  la api del sitio.
+* Al crear la aplicacion, obtenemos una application key y application secret
+  las cuales son requeridas en el settings.py.
+* Opcionalmente se define el storage, ya que tiene siempre un storage definido
+  por defecto para cada framework. Esta es la capa de almacenamiento de los 
+  datos para la autenticacion.
+* Incluir las urls.
+  * Login
+  * Complete
+  * Disconect
+* Definir los nombres de las urls que participan en el proceso.
+* Y por ultimo en nuestro template de login, agregamos el link que desencadena
+  el proceso.
+
+Los dos principales conceptos con los que nos debemos quedar son Storage y 
+Backend, estas son las principales interfaces de la libreria.
