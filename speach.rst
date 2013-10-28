@@ -141,3 +141,14 @@ Features:
         - Yandex
     * Login con username y email (sin contraseña pero esta se puede verificar
       en un pipeline)
+
+Diapositiva 4 (Detras de camaras)
+---------------------------------
+
+Por detras de lo que se ve en el video, ocurre un flujo de requests de un lado
+al otro, tal como se muestra en el diagrama.
+El punto de origen es el usuario clickeando en el link de login,
+en ese momento nuestro servidor redirecciona a la url de login correspondiente 
+al provider seleccionado. Una vez que el usuario autentifica en el sitio, este
+nos trae de regreso a la url de complete, y por ultimo social auth hace otra
+redireccion a la url post login definida en las settings.

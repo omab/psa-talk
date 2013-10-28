@@ -93,17 +93,98 @@
         </section>
 
         <section>
-          <h1>TUTORIAL</h1>
-          <pre>
-            <code class="python">
-              TEMPLATE_CONTEXT_PROCESSORS = (
-                  ...
-                  'social.apps.django_app.context_processors.backends',
-                  'social.apps.django_app.context_processors.login_redirect',
-                  ...
-              )
-            </code>
-          </pre>
+          <section>
+            <h1>TUTORIAL</h1>
+            <span>settings.py</span>
+            <pre><code data-trim class="python">
+INSTALLED_APPS = (
+    ...
+    'social.apps.django_app.default',
+    ...
+)
+            </code></pre>
+          </section>
+
+          <section>
+            <span>settings.py</span>
+            <pre><code data-trim class="python">
+AUTHENTICATION_BACKENDS = (
+    'social.backends.google.GoogleOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'social.backends.github.GithubOAuth2',
+    ...
+    'django.contrib.auth.backends.ModelBackend',
+)
+            </code></pre>
+          </section>
+
+          <section>
+            <span>settings.py</span>
+            <pre><code data-trim class="python">
+SOCIAL_AUTH_FACEBOOK_KEY = 'foobar'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'bazqux'
+            </code></pre>
+          </section>
+
+          <section>
+            <span>settings.py</span>
+            <pre><code class="python">
+SOCIAL_AUTH_STORAGE = 'social.apps.django_app.me.models.DjangoStorage'
+            </code></pre>
+          </section>
+
+          <section>
+            <span>urls.py</span>
+            <pre><code data-trim class="python">
+urlpatterns = patterns('',
+    ...
+    url('', include('social.apps.django_app.urls', namespace='social'))
+    ...
+)
+            </code></pre>
+          </section>
+
+          <section>
+            <span>settings.py</span>
+            <pre><code data-trim class="python">
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/logged-in/'
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
+SOCIAL_AUTH_LOGIN_URL = '/login-url/'
+
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
+SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
+SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/account-disconnected-redirect-url/'
+SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
+
+            </code></pre>
+          </section>
+
+          <section>
+            <span>settings.py</span>
+            <pre><code data-trim class="python">
+TEMPLATE_CONTEXT_PROCESSORS = (
+    ...
+    'social.apps.django_app.context_processors.backends',
+    'social.apps.django_app.context_processors.login_redirect',
+    ...
+)
+            </code></pre>
+          </section>
+
+          <section>
+            <span>login.html</span>
+            <pre><code data-trim class="">
+...
+&lt;a href="{% url 'social:begin' "facebook" %}"&gt;Login with Facebook&lt;/a&gt;
+...
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Strategy</h1>
+            <h1>&</h1>
+            <h1>Storage</h1>
+          </section>
           <!--como usar python social auth-->
           <!--screens de las apps-->
           <!--codigo-->
