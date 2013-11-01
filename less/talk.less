@@ -1,15 +1,88 @@
-#first {
-    div {
-        margin-top: 30px;
-        margin-bottom: 30px;
+body {
+    background: #eee;
+    // background: #CF0638;
+    // background: #FC354C;
+    // background: #CF4647;
+    // color: #29221F;
+    // background: url("/img/background3.jpg");
+    // background-size: cover;
+
+    a, a:visited {
+        color: blue;
+        text-decoration: none;
+    }
+
+    pre {
+        font-size: 1.5em !important;
+        border: 2px solid #bbb !important;
+    }
+}
+
+.reveal {
+    padding: 0;
+    margin: 50px 0;
+    background: fade(#eee, 20%);
+
+    .slides {
+        section {
+            height: 100%;
+            font-size: 1em;
+
+            h1 {
+                margin-bottom: 1em;
+            }
+
+            p {
+                text-align: left;
+            }
+        }
+    }
+
+    .progress {
+        background: rgba(0, 0, 0, 0.2);
+        height: 12px;
+
+        span {
+            background: #13daec;
+        }
+    }
+
+    .flow-controls {
+        position: absolute;
+        bottom: 4em;
+        right: 2em;
+        z-index: 30;
+
+        a {
+            font-weight: bold;
+            font-size: 4em;
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+                color: #13daec;
+            }
+        }
+    }
+}
+
+#cover {
+    > h1 {
+        font-size: 8em;
+        margin-bottom: .3em;
+    }
+
+    > p {
+        text-align: center;
+        font-size: 4em;
     }
 
     #github-handles {
-        @sep: 30px;
+        @sep: 2em;
+        font-size: 3em;
 
         span {
             display: inline-block;
-            text-align: left;
 
             &:first-child {
                 margin-right: @sep;
@@ -18,18 +91,33 @@
             &:last-child {
                 margin-left: @sep;
             }
+
+            i.fa {  // font-awesome
+              font-style: normal;
+            }
         }
     }
 }
 
-i.fa {  // font-awesome
-  font-style: normal;
-}
+#dsa, #psa, #strategy-storage {
+    h1 {
+        float: left;
+        text-align: center;
+    }
 
-pre {
-    font-size: 1em !important;
-    border: 2px solid #bbb !important;
-    width: 80% !important;
+    > div {
+        display: inline-block;
+        text-align: left;
+
+        > div {
+            margin-bottom: 1em;
+
+            h2 {
+                border-bottom: 1px solid #333;
+                margin-bottom: .5em;
+            }
+        }
+    }
 }
 
 .backends {
@@ -38,13 +126,60 @@ pre {
     }
 }
 
-.reveal section img {
-    border: 0px;
-    background: none;
-    box-shadow: none;
+#is-dead {
+    > span {
+        display: inline-block;
+        width: 520px;
+        text-align: center;
+        margin-top: 1em;
+
+        img {
+            width: 520px;
+            height: 450px;
+        }
+
+        > span {
+            position: relative;
+            top: 247px;
+            left: -9px;
+            color: white;
+            font-weight: bold;
+            font-size: 3em;
+
+            -webkit-transform: skew(-3deg, 3deg);
+                -ms-transform: skew(-3deg, 3deg);
+                    transform: skew(-3deg, 3deg);
+        }
+    }
 }
 
-.settings {
+#video {
+    video {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+#install {
+    div {
+        display: inline-block;
+        padding: 2em;
+        margin-top: 10em;
+
+        span {
+            font-family: monospace;
+            font-size: 3em;
+
+            margin-left: 1em;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+#settings {
     pre {
         margin: 0px auto;
         box-shadow: none;
@@ -52,13 +187,26 @@ pre {
         border-bottom: 0px !important;
 
         &.installed-apps {
-            margin-top: 15px;
+            margin-top: 1em;
             border-top: 2px solid #bbb !important;
         }
 
         &:last-child {
-            margin-bottom: 15px;
+            margin-bottom: 1em;
             border-bottom: 2px solid #bbb !important;
         }
+    }
+}
+
+#strategy-storage {
+    pre {
+        margin: 0 0;
+        width: 100%;
+    }
+}
+
+#requests {
+    img {
+        height: 80%;
     }
 }

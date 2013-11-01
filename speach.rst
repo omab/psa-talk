@@ -58,8 +58,22 @@ Features:
         - Exacttarget HubExchange
         - Appsfuel 
 
+Diapositiva 2 (Django Social Auth is dead)
+------------------------------------------
 
-Diapositiva 2 (Python Social Auth)
+El 29 de Agosto de 2013 se marca la librería como deprecated para favorecer el
+desarrollo y aceptación de python-social-auth. El día 5 de Octubre de 2013 se
+realiza el último commit en al código. Los últimos cambios implican un
+refactoreo general del código para hacer DSA depender de PSA.
+
+Por qué la nueva lib? Python-social-auth es una generalización de DSA, busca
+ser una solución para un problema común independiente al framework que se
+utilice. La idea había surgido hace tiempo al ya que era el siguiente paso
+lógico para la aplicación, sumado con el interes de empezar a usar Flask
+o Pyramid acelero el nacimiento de PSA.
+
+
+Diapositiva 3 (Python Social Auth)
 ----------------------------------
 
 Propósito:
@@ -142,39 +156,45 @@ Features:
     * Login con username y email (sin contraseña pero esta se puede verificar
       en un pipeline)
 
-Diapositiva 4 (Detras de camaras)
+
+Diapositiva 5 (Detrás de cámaras)
 ---------------------------------
 
-Por detras de lo que se ve en el video, ocurre un flujo de requests de un lado
+Por detrás de lo que se ve en el video, ocurre un flujo de requests de un lado
 al otro, tal como se muestra en el diagrama.
-El punto de origen es el usuario clickeando en el link de login,
-en ese momento nuestro servidor redirecciona a la url de login correspondiente 
-al provider seleccionado. Una vez que el usuario autentifica en el sitio, este
-nos trae de regreso a la url de complete, y por ultimo social auth hace otra
-redireccion a la url post login definida en las settings.
 
-Diapositiva 5 (Tutorial)
+El punto de origen es el usuario clickeando en el link de login, en ese momento
+la aplicación redirecciona a la url de login correspondiente al provider
+seleccionado.
+
+Una vez que el usuario autentifica (y autoriza) en el provider, este nos trae
+de regreso a la URL de "complete", y por último social auth hace otra
+redirección a la URL post login definida en las settings.
+
+
+Diapositiva 6 (Tutorial)
 ------------------------
 
 El primer paso es instalarlo.
-Lo siguente es configurar nuestra aplicacion para que use psa.
-* Agregar la aplicacion a las installed apps.
-* Agregar los backends de autenticacion a utilizar.
-  Estos "backends" son las diferentes estrategias que psa utiliza.
-* Se registra la aplicacion en facebook, para obtener acceso a las llamadas de
-  la api del sitio.
-* Al crear la aplicacion, obtenemos una application key y application secret
-  las cuales son requeridas en el settings.py.
-* Opcionalmente se define el storage, ya que tiene siempre un storage definido
-  por defecto para cada framework. Esta es la capa de almacenamiento de los 
-  datos para la autenticacion.
-* Incluir las urls.
-  * Login
-  * Complete
-  * Disconect
-* Definir los nombres de las urls que participan en el proceso.
-* Y por ultimo en nuestro template de login, agregamos el link que desencadena
-  el proceso.
+
+Lo siguente es configurar nuestra aplicacion para que use PSA.
+  * Agregar la aplicacion a las installed apps.
+  * Agregar los backends de autenticacion a utilizar. Estos "backends" son las
+    diferentes estrategias que PSA utiliza.
+  * Se registra la aplicacion en facebook, para obtener acceso a las llamadas
+    de la api del sitio.
+  * Al crear la aplicacion, obtenemos una application key y application secret
+    las cuales son requeridas en el settings.py.
+  * Opcionalmente se define el storage, ya que tiene siempre un storage
+    definido por defecto para cada framework. Esta es la capa de almacenamiento
+    de los datos para la autenticacion.
+  * Incluir las urls.
+    - Login
+    - Complete
+    - Disconect
+  * Definir los nombres de las urls que participan en el proceso.
+  * Y por ultimo en nuestro template de login, agregamos el link que
+    desencadena el proceso.
 
 Los dos principales conceptos con los que nos debemos quedar son Storage y 
 Backend, estas son las principales interfaces de la libreria.

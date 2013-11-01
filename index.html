@@ -17,9 +17,9 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section id="first">
+        <section id="cover">
           <h1>django-social-auth</h1>
-          <div>is dead, long live to</div>
+          <p>is dead, long live to</p>
           <h1>python-social-auth</h1>
 
           <p id="github-handles">
@@ -28,239 +28,233 @@
           </p>
         </section>
 
-        <section>
-          <section>
-            <h1>Django Social Auth (DSA)</h1>
-            <ul>
-              <li>Propósito</li>
-              <li>Números</li>
-              <li>Features</li>
-            </ul>
-          </section>
+        <section id="dsa">
+          <h1>Django Social Auth</h1>
 
-          <section>
-            <h1>Propósito</h1>
+          <div>
+            <div>
+              <h2>Propósito</h2>
+              <ul>
+                <li>
+                  Solucionar el problema del autenticado y autorización mediante el uso de
+                  redes sociales que soportan los protocolos OAuth1, OAuth2 y OpenId.
+                </li>
 
-            <p class="fragment">
-              Solucionar el problema del autenticado y autorización mediante el uso de
-              redes sociales que soportan los protocolos OAuth1, OAuth2 y OpenId.
-            </p>
+                <li>
+                  Surge como resultado de horas de frustración al intentar utilizar otras
+                  soluciones disponibles.
+                </li>
+              </ul>
+            </div>
 
-            <p class="fragment">
-              Surge como resultado de horas de frustración al intentar utilizar otras
-              soluciones disponibles.
-            </p>
-          </section>
+            <div class="fragment">
+              <h2>Features</h2>
+              <ul>
+                <li>Django ORM y Mongoengine</li>
+                <li>Datos básicos del usuario</li>
+                <li>Múltiple cuentas sociales asociadas a un único usuario</li>
+                <li>Modelo de usuario configurable</li>
+                <li>Pipeline extensible</li>
+                <li>Variedad de sitios sociales soportados</li>
+              </ul>
+            </div>
 
-          <section>
-            <h1>Números</h1>
-            <ul>
-              <li class="fragment">Nace el 8 de Noviembre de 2010 y muere el 5 de Octubre de 2013</li>
-              <li class="fragment">Un total de 1605 commits</li>
-              <li class="fragment">9614 líneas de código</li>
-              <li class="fragment">165 aportes</li>
-              <li class="fragment">751 issues cerrados</li>
-              <li class="fragment">674 forks</li>
-              <li class="fragment">1990 stars</li>
-              <li class="fragment">116 watchers</li>
-            </ul>
-
-          </section>
-
-          <section>
-            <h1>Features</h1>
-            <ul>
-              <li class="fragment">Django ORM y Mongoengine</li>
-              <li class="fragment">Registro de datos básicos del usuario al momento de registrarse</li>
-              <li class="fragment">Múltiple cuentas sociales asociadas a un único usuario</li>
-              <li class="fragment">Modelo de usuario configurable</li>
-              <li class="fragment">Pipeline extensible utilizado al momento del autenticado o asociación</li>
-              <li class="fragment">Variedad de sitios sociales soportados</li>
-            </ul>
-          </section>
-
-          <section class="backends">
-            <h1>Backends</h1>
-            <img class="fragment" src="img/logos/appsfuel.png" alt="appsfuel" title="appsfuel" />
-            <img class="fragment" src="img/logos/bitbucket.png" alt="bitbucket" title="bitbucket" />
-            <img class="fragment" src="img/logos/disqus.png" alt="disqus" title="disqus" />
-            <img class="fragment" src="img/logos/dropbox.png" alt="dropbox" title="dropbox" />
-            <img class="fragment" src="img/logos/evernote.png" alt="evernote" title="evernote" />
-            <img class="fragment" src="img/logos/exacttarget_hubExchange.png" alt="exacttarget_hubExchange" title="exacttarget_hubExchange" />
-            <img class="fragment" src="img/logos/facebook.png" alt="facebook" title="facebook" />
-            <img class="fragment" src="img/logos/fedora.png" alt="fedora" title="fedora" />
-            <img class="fragment" src="img/logos/fitbit.png" alt="fitbit" title="fitbit" />
-            <img class="fragment" src="img/logos/flickr.png" alt="flickr" title="flickr" />
-            <img class="fragment" src="img/logos/foursquare.png" alt="foursquare" title="foursquare" />
-            <img class="fragment" src="img/logos/github.png" alt="github" title="github" />
-            <img class="fragment" src="img/logos/google.png" alt="google" title="google" />
-            <img class="fragment" src="img/logos/instagram.png" alt="instagram" title="instagram" />
-            <img class="fragment" src="img/logos/linkedin.png" alt="linkedin" title="linkedin" />
-            <img class="fragment" src="img/logos/live.png" alt="live" title="live" />
-            <img class="fragment" src="img/logos/livejournal.png" alt="livejournal" title="livejournal" />
-            <img class="fragment" src="img/logos/Logo_of_Douban.png" alt="Logo_of_Douban" title="Logo_of_Douban" />
-            <img class="fragment" src="img/logos/mailru.png" alt="mailru" title="mailru" />
-            <img class="fragment" src="img/logos/mixcloud.png" alt="mixcloud" title="mixcloud" />
-            <img class="fragment" src="img/logos/odnoklassniki.png" alt="odnoklassniki" title="odnoklassniki" />
-            <img class="fragment" src="img/logos/orkut.png" alt="orkut" title="orkut" />
-            <img class="fragment" src="img/logos/persona.png" alt="persona" title="persona" />
-            <img class="fragment" src="img/logos/shopify.png" alt="shopify" title="shopify" />
-            <img class="fragment" src="img/logos/skyrock.png" alt="skyrock" title="skyrock" />
-            <img class="fragment" src="img/logos/stackoverflow.png" alt="stackoverflow" title="stackoverflow" />
-            <img class="fragment" src="img/logos/stocktwits.png" alt="stocktwits" title="stocktwits" />
-            <img class="fragment" src="img/logos/trello.png" alt="trello" title="trello" />
-            <img class="fragment" src="img/logos/twilio.png" alt="twilio" title="twilio" />
-            <img class="fragment" src="img/logos/twitter.png" alt="twitter" title="twitter" />
-            <img class="fragment" src="img/logos/vk.png" alt="vk" title="vk" />
-            <img class="fragment" src="img/logos/weibo.png" alt="weibo" title="weibo" />
-            <img class="fragment" src="img/logos/yahoo.png" alt="yahoo" title="yahoo" />
-            <img class="fragment" src="img/logos/yandex.png" alt="yandex" title="yandex" />
-          </section>
+            <div class="fragment">
+              <h2>Números</h2>
+              <ul>
+                <li>Nace 8/11/2010 y muere el 5/10/2013</li>
+                <li>Un total de 1605 commits</li>
+                <li>9614 líneas de código</li>
+                <li>Aportes de 165 personas</li>
+                <li>751 issues cerrados</li>
+                <li>674 forks</li>
+                <li>1990 stars</li>
+                <li>116 watchers</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
-        <section>
-          <section>
-            <h1>Python Social Auth (PSA)</h1>
-            <ul>
-              <li>Propósito</li>
-              <li>Números</li>
-              <li>Features</li>
-            </ul>
-          </section>
-
-          <section>
-            <h1>Propósito</h1>
-
-            <p class="fragment">
-              Realizar lo mismo que django-social-auth pero siendo una solución
-              multi-framework.
-            </p>
-
-            <p class="fragment">
-              La idea surge como el comentario de un amigo luego de unas cervezas, y la
-              implementación se vuelve realidad cuando empiezo a usar otros frameworks
-              aparte de Django.
-            </p>
-          </section>
-
-          <section>
-            <h1>Números</h1>
-            <ul>
-              <li class="fragment">Nace el 12 de Diciembre de 2012</li>
-              <li class="fragment">598 commits</li>
-              <li class="fragment">11953 líneas de código</li>
-              <li class="fragment">19 aportes</li>
-              <li class="fragment">57 issues cerrados</li>
-              <li class="fragment">54 forks</li>
-              <li class="fragment">314 stars</li>
-              <li class="fragment">25 watchers</li>
-            </ul>
-          </section>
-
-          <section>
-            <h1>Features</h1>
-            <ul>
-              <li class="fragment">Múltiple framewors (Django, Flask, Pyramid, Webpy ...)</li>
-              <li class="fragment">Registro de datos básicos del usuario al momento de registrarse</li>
-              <li class="fragment">Múltiple cuentas sociales asociadas a un único usuario</li>
-              <li class="fragment">Modelo de usuario configurable</li>
-              <li class="fragment">Pipeline extensible utilizado al momento del autenticado o asociación</li>
-              <li class="fragment">Pipeline extensible utilizado al momento de la desconexión de una cuenta</li>
-              <li class="fragment">Login con username y email (sin contraseña pero esta se puede verificar en un pipeline)</li>
-              <li class="fragment">Variedad de sitios sociales soportados</li>
-            </ul>
-          </section>
-
-          <section class="backends">
-            <h1>Backends</h1>
-            <img class="fragment" src="img/logos/amazon.png" alt="amazon" title="amazon" />
-            <img class="fragment" src="img/logos/angellist.png" alt="angellist" title="angellist" />
-            <img class="fragment" src="img/logos/aol.png" alt="aol" title="aol" />
-            <img class="fragment" src="img/logos/appsfuel.png" alt="appsfuel" title="appsfuel" />
-            <img class="fragment" src="img/logos/behance.png" alt="behance" title="behance" />
-            <img class="fragment" src="img/logos/belgiumeid.png" alt="belgiumeid" title="belgiumeid" />
-            <img class="fragment" src="img/logos/bitbucket.png" alt="bitbucket" title="bitbucket" />
-            <img class="fragment" src="img/logos/box.png" alt="box" title="box" />
-            <img class="fragment" src="img/logos/dailymotion.png" alt="dailymotion" title="dailymotion" />
-            <img class="fragment" src="img/logos/disqus.png" alt="disqus" title="disqus" />
-            <img class="fragment" src="img/logos/dropbox.png" alt="dropbox" title="dropbox" />
-            <img class="fragment" src="img/logos/evernote.png" alt="evernote" title="evernote" />
-            <img class="fragment" src="img/logos/exacttarget_hubExchange.png" alt="exacttarget hubExchange" title="exacttarget hubExchange" />
-            <img class="fragment" src="img/logos/facebook.png" alt="facebook" title="facebook" />
-            <img class="fragment" src="img/logos/fedora.png" alt="fedora" title="fedora" />
-            <img class="fragment" src="img/logos/fitbit.png" alt="fitbit" title="fitbit" />
-            <img class="fragment" src="img/logos/flickr.png" alt="flickr" title="flickr" />
-            <img class="fragment" src="img/logos/foursquare.png" alt="foursquare" title="foursquare" />
-            <img class="fragment" src="img/logos/github.png" alt="github" title="github" />
-            <img class="fragment" src="img/logos/google.png" alt="google" title="google" />
-            <img class="fragment" src="img/logos/instagram.png" alt="instagram" title="instagram" />
-            <img class="fragment" src="img/logos/jawbone.png" alt="jawbone" title="jawbone" />
-            <img class="fragment" src="img/logos/linkedin.png" alt="linkedin" title="linkedin" />
-            <img class="fragment" src="img/logos/live.png" alt="live" title="live" />
-            <img class="fragment" src="img/logos/livejournal.png" alt="livejournal" title="livejournal" />
-            <img class="fragment" src="img/logos/Logo_of_Douban.png" alt="Logo_of_Douban" title="Logo_of_Douban" />
-            <img class="fragment" src="img/logos/mailru.png" alt="mailru" title="mailru" />
-            <img class="fragment" src="img/logos/mendeley.png" alt="mendeley" title="mendeley" />
-            <img class="fragment" src="img/logos/mixcloud.png" alt="mixcloud" title="mixcloud" />
-            <img class="fragment" src="img/logos/odnoklassniki.png" alt="odnoklassniki" title="odnoklassniki" />
-            <img class="fragment" src="img/logos/opensuse.png" alt="opensuse" title="opensuse" />
-            <img class="fragment" src="img/logos/orkut.png" alt="orkut" title="orkut" />
-            <img class="fragment" src="img/logos/persona.png" alt="persona" title="persona" />
-            <img class="fragment" src="img/logos/podio.png" alt="podio" title="podio" />
-            <img class="fragment" src="img/logos/rdio.png" alt="rdio" title="rdio" />
-            <img class="fragment" src="img/logos/readability.png" alt="readability" title="readability" />
-            <img class="fragment" src="img/logos/reddit.png" alt="reddit" title="reddit" />
-            <img class="fragment" src="img/logos/shopify.png" alt="shopify" title="shopify" />
-            <img class="fragment" src="img/logos/skyrock.png" alt="skyrock" title="skyrock" />
-            <img class="fragment" src="img/logos/soundcloud.png" alt="soundcloud" title="soundcloud" />
-            <img class="fragment" src="img/logos/stackoverflow.png" alt="stackoverflow" title="stackoverflow" />
-            <img class="fragment" src="img/logos/steam.png" alt="steam" title="steam" />
-            <img class="fragment" src="img/logos/stocktwits.png" alt="stocktwits" title="stocktwits" />
-            <img class="fragment" src="img/logos/stripe.png" alt="stripe" title="stripe" />
-            <img class="fragment" src="img/logos/thisismyjam.png" alt="thisismyjam" title="thisismyjam" />
-            <img class="fragment" src="img/logos/trello.png" alt="trello" title="trello" />
-            <img class="fragment" src="img/logos/tripit.png" alt="tripit" title="tripit" />
-            <img class="fragment" src="img/logos/tumblr.png" alt="tumblr" title="tumblr" />
-            <img class="fragment" src="img/logos/twilio.png" alt="twilio" title="twilio" />
-            <img class="fragment" src="img/logos/twitter.png" alt="twitter" title="twitter" />
-            <img class="fragment" src="img/logos/vk.png" alt="vk" title="vk" />
-            <img class="fragment" src="img/logos/weibo.png" alt="weibo" title="weibo" />
-            <img class="fragment" src="img/logos/xing.png" alt="xing" title="xing" />
-            <img class="fragment" src="img/logos/yahoo.png" alt="yahoo" title="yahoo" />
-            <img class="fragment" src="img/logos/yammer.png" alt="yammer" title="yammer" />
-            <img class="fragment" src="img/logos/yandex.png" alt="yandex" title="yandex" />
-          </section>
+        <section class="backends">
+          <h1>Backends</h1>
+          <img class="fragment" src="img/logos/appsfuel.png" alt="appsfuel" title="appsfuel" />
+          <img class="fragment" src="img/logos/bitbucket.png" alt="bitbucket" title="bitbucket" />
+          <img class="fragment" src="img/logos/disqus.png" alt="disqus" title="disqus" />
+          <img class="fragment" src="img/logos/dropbox.png" alt="dropbox" title="dropbox" />
+          <img class="fragment" src="img/logos/evernote.png" alt="evernote" title="evernote" />
+          <img class="fragment" src="img/logos/exacttarget_hubExchange.png" alt="exacttarget_hubExchange" title="exacttarget_hubExchange" />
+          <img class="fragment" src="img/logos/facebook.png" alt="facebook" title="facebook" />
+          <img class="fragment" src="img/logos/fedora.png" alt="fedora" title="fedora" />
+          <img class="fragment" src="img/logos/fitbit.png" alt="fitbit" title="fitbit" />
+          <img class="fragment" src="img/logos/flickr.png" alt="flickr" title="flickr" />
+          <img class="fragment" src="img/logos/foursquare.png" alt="foursquare" title="foursquare" />
+          <img class="fragment" src="img/logos/github.png" alt="github" title="github" />
+          <img class="fragment" src="img/logos/google.png" alt="google" title="google" />
+          <img class="fragment" src="img/logos/instagram.png" alt="instagram" title="instagram" />
+          <img class="fragment" src="img/logos/linkedin.png" alt="linkedin" title="linkedin" />
+          <img class="fragment" src="img/logos/live.png" alt="live" title="live" />
+          <img class="fragment" src="img/logos/livejournal.png" alt="livejournal" title="livejournal" />
+          <img class="fragment" src="img/logos/Logo_of_Douban.png" alt="Logo_of_Douban" title="Logo_of_Douban" />
+          <img class="fragment" src="img/logos/mailru.png" alt="mailru" title="mailru" />
+          <img class="fragment" src="img/logos/mixcloud.png" alt="mixcloud" title="mixcloud" />
+          <img class="fragment" src="img/logos/odnoklassniki.png" alt="odnoklassniki" title="odnoklassniki" />
+          <img class="fragment" src="img/logos/orkut.png" alt="orkut" title="orkut" />
+          <img class="fragment" src="img/logos/persona.png" alt="persona" title="persona" />
+          <img class="fragment" src="img/logos/shopify.png" alt="shopify" title="shopify" />
+          <img class="fragment" src="img/logos/skyrock.png" alt="skyrock" title="skyrock" />
+          <img class="fragment" src="img/logos/stackoverflow.png" alt="stackoverflow" title="stackoverflow" />
+          <img class="fragment" src="img/logos/stocktwits.png" alt="stocktwits" title="stocktwits" />
+          <img class="fragment" src="img/logos/trello.png" alt="trello" title="trello" />
+          <img class="fragment" src="img/logos/twilio.png" alt="twilio" title="twilio" />
+          <img class="fragment" src="img/logos/twitter.png" alt="twitter" title="twitter" />
+          <img class="fragment" src="img/logos/vk.png" alt="vk" title="vk" />
+          <img class="fragment" src="img/logos/weibo.png" alt="weibo" title="weibo" />
+          <img class="fragment" src="img/logos/yahoo.png" alt="yahoo" title="yahoo" />
+          <img class="fragment" src="img/logos/yandex.png" alt="yandex" title="yandex" />
         </section>
 
-        <section>
-          <span style="letter-spacing: 21px;">FRAMEWORKS + BACKENDS</span>
-          <h1>PYTHON SOCIAL AUTH</h1>
-          <span>(PSA)</span>
+        <section id="is-dead">
+          <h1>Django Social Auth</h1>
+          <span>
+            <span class="fragment">5/10/2013</span>
+            <img id="rip" src="img/rip.png" />
+          </span>
         </section>
 
-        <section>
-          <h1>PSA EN ACCION</h1>
+        <section id="psa">
+          <h1>Python Social Auth</h1>
+
+          <div>
+            <div>
+              <h2>Propósito</h2>
+              <ul>
+                <li>
+                  Realizar lo mismo que django-social-auth pero siendo una solución
+                  multi-framework.
+                </li>
+
+                <li>
+                  La idea surge como el comentario de un amigo luego de unas cervezas, y la
+                  implementación se vuelve realidad cuando empiezo a usar otros frameworks
+                  aparte de Django.
+                </li>
+              </ul>
+            </div>
+
+            <div class="fragment">
+              <h2>Features</h2>
+              <ul>
+                <li>Múltiple framewors (Django, Flask, Pyramid, Webpy ...)</li>
+                <li>Datos básicos del usuario</li>
+                <li>Múltiple cuentas sociales asociadas a un único usuario</li>
+                <li>Modelo de usuario configurable</li>
+                <li>Pipeline extensible</li>
+                <li>Login con username y email</li>
+                <li>Variedad de sitios sociales soportados</li>
+              </ul>
+            </div>
+
+            <div class="fragment">
+              <h2>Números</h2>
+              <ul>
+                <li>Nace el 12 de Diciembre de 2012</li>
+                <li>598 commits</li>
+                <li>11953 líneas de código</li>
+                <li>19 aportes</li>
+                <li>57 issues cerrados</li>
+                <li>54 forks</li>
+                <li>314 stars</li>
+                <li>25 watchers</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="backends">
+          <h1>Backends</h1>
+          <img class="fragment" src="img/logos/amazon.png" alt="amazon" title="amazon" />
+          <img class="fragment" src="img/logos/angellist.png" alt="angellist" title="angellist" />
+          <img class="fragment" src="img/logos/aol.png" alt="aol" title="aol" />
+          <img class="fragment" src="img/logos/appsfuel.png" alt="appsfuel" title="appsfuel" />
+          <img class="fragment" src="img/logos/behance.png" alt="behance" title="behance" />
+          <img class="fragment" src="img/logos/belgiumeid.png" alt="belgiumeid" title="belgiumeid" />
+          <img class="fragment" src="img/logos/bitbucket.png" alt="bitbucket" title="bitbucket" />
+          <img class="fragment" src="img/logos/box.png" alt="box" title="box" />
+          <img class="fragment" src="img/logos/dailymotion.png" alt="dailymotion" title="dailymotion" />
+          <img class="fragment" src="img/logos/disqus.png" alt="disqus" title="disqus" />
+          <img class="fragment" src="img/logos/dropbox.png" alt="dropbox" title="dropbox" />
+          <img class="fragment" src="img/logos/evernote.png" alt="evernote" title="evernote" />
+          <img class="fragment" src="img/logos/exacttarget_hubExchange.png" alt="exacttarget hubExchange" title="exacttarget hubExchange" />
+          <img class="fragment" src="img/logos/facebook.png" alt="facebook" title="facebook" />
+          <img class="fragment" src="img/logos/fedora.png" alt="fedora" title="fedora" />
+          <img class="fragment" src="img/logos/fitbit.png" alt="fitbit" title="fitbit" />
+          <img class="fragment" src="img/logos/flickr.png" alt="flickr" title="flickr" />
+          <img class="fragment" src="img/logos/foursquare.png" alt="foursquare" title="foursquare" />
+          <img class="fragment" src="img/logos/github.png" alt="github" title="github" />
+          <img class="fragment" src="img/logos/google.png" alt="google" title="google" />
+          <img class="fragment" src="img/logos/instagram.png" alt="instagram" title="instagram" />
+          <img class="fragment" src="img/logos/jawbone.png" alt="jawbone" title="jawbone" />
+          <img class="fragment" src="img/logos/linkedin.png" alt="linkedin" title="linkedin" />
+          <img class="fragment" src="img/logos/live.png" alt="live" title="live" />
+          <img class="fragment" src="img/logos/livejournal.png" alt="livejournal" title="livejournal" />
+          <img class="fragment" src="img/logos/Logo_of_Douban.png" alt="Logo_of_Douban" title="Logo_of_Douban" />
+          <img class="fragment" src="img/logos/mailru.png" alt="mailru" title="mailru" />
+          <img class="fragment" src="img/logos/mendeley.png" alt="mendeley" title="mendeley" />
+          <img class="fragment" src="img/logos/mixcloud.png" alt="mixcloud" title="mixcloud" />
+          <img class="fragment" src="img/logos/odnoklassniki.png" alt="odnoklassniki" title="odnoklassniki" />
+          <img class="fragment" src="img/logos/opensuse.png" alt="opensuse" title="opensuse" />
+          <img class="fragment" src="img/logos/orkut.png" alt="orkut" title="orkut" />
+          <img class="fragment" src="img/logos/persona.png" alt="persona" title="persona" />
+          <img class="fragment" src="img/logos/podio.png" alt="podio" title="podio" />
+          <img class="fragment" src="img/logos/rdio.png" alt="rdio" title="rdio" />
+          <img class="fragment" src="img/logos/readability.png" alt="readability" title="readability" />
+          <img class="fragment" src="img/logos/reddit.png" alt="reddit" title="reddit" />
+          <img class="fragment" src="img/logos/shopify.png" alt="shopify" title="shopify" />
+          <img class="fragment" src="img/logos/skyrock.png" alt="skyrock" title="skyrock" />
+          <img class="fragment" src="img/logos/soundcloud.png" alt="soundcloud" title="soundcloud" />
+          <img class="fragment" src="img/logos/stackoverflow.png" alt="stackoverflow" title="stackoverflow" />
+          <img class="fragment" src="img/logos/steam.png" alt="steam" title="steam" />
+          <img class="fragment" src="img/logos/stocktwits.png" alt="stocktwits" title="stocktwits" />
+          <img class="fragment" src="img/logos/stripe.png" alt="stripe" title="stripe" />
+          <img class="fragment" src="img/logos/thisismyjam.png" alt="thisismyjam" title="thisismyjam" />
+          <img class="fragment" src="img/logos/trello.png" alt="trello" title="trello" />
+          <img class="fragment" src="img/logos/tripit.png" alt="tripit" title="tripit" />
+          <img class="fragment" src="img/logos/tumblr.png" alt="tumblr" title="tumblr" />
+          <img class="fragment" src="img/logos/twilio.png" alt="twilio" title="twilio" />
+          <img class="fragment" src="img/logos/twitter.png" alt="twitter" title="twitter" />
+          <img class="fragment" src="img/logos/vk.png" alt="vk" title="vk" />
+          <img class="fragment" src="img/logos/weibo.png" alt="weibo" title="weibo" />
+          <img class="fragment" src="img/logos/xing.png" alt="xing" title="xing" />
+          <img class="fragment" src="img/logos/yahoo.png" alt="yahoo" title="yahoo" />
+          <img class="fragment" src="img/logos/yammer.png" alt="yammer" title="yammer" />
+          <img class="fragment" src="img/logos/yandex.png" alt="yandex" title="yandex" />
+        </section>
+
+        <section id="video">
+          <h1>Python Social Auth en acción</h1>
           <!-- video -->
-          <video class="stretch" controls autoplay>
+          <video class="stretch" controls>
             <source src="example.ogv" type="video/ogg">
           </video>
         </section>
 
-        <section>
-          <h1>DETRAS DE CAMARAS</h1>
-          <!--flujo de los requests-->
+        <section id="requests">
+          <h1>Detrás de cámaras</h1>
+          <img src="img/requests.png">
         </section>
 
         <section>
-          <section>
-            <h1>TUTORIAL - DJANGO</h1>
-            <pre><code>
-$ pip install python-social-auth
-            </code></pre>
+          <section id="install">
+            <h1>Tutorial (Django)</h1>
+            <div>
+              <span class="fragment">$ pip</span>
+              <span class="fragment">install</span>
+              <span class="fragment">python-social-auth</span>
+            </div>
           </section>
 
-          <section class="settings">
-            <span>settings.py</span>
+          <section id="settings">
+            <h1>settings.py</h1>
             <pre class="installed-apps"><code data-trim class="python">
 INSTALLED_APPS = (
     ...
@@ -279,9 +273,14 @@ AUTHENTICATION_BACKENDS = (
 )
             </code></pre>
 
-            <pre class="fragment"><code class="python">
-SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
-SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
+            <pre class="fragment"><code data-trim class="python">
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/logged-in/'
+SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
+SOCIAL_AUTH_LOGIN_URL = '/login-url/'
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
+SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
+SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/account-disconnected-redirect-url/'
+SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
             </code></pre>
 
             <pre class="fragment"><code data-trim class="python">
@@ -291,7 +290,7 @@ SOCIAL_AUTH_FACEBOOK_SECRET = 'bazqux'
           </section>
 
           <section>
-            <span>urls.py</span>
+            <h1>urls.py</h1>
             <pre><code data-trim class="python">
 urlpatterns = patterns('',
     ...
@@ -302,62 +301,67 @@ urlpatterns = patterns('',
           </section>
 
           <section>
-            <span>settings.py</span>
-            <pre><code data-trim class="python">
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/logged-in/'
-SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
-SOCIAL_AUTH_LOGIN_URL = '/login-url/'
-
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
-SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
-SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/account-disconnected-redirect-url/'
-SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
-
-            </code></pre>
-          </section>
-
-          <section>
-            <span>login.html</span>
-            <pre><code data-trim class="">
-...
+            <h1>login.html</h1>
+            <pre><code data-trim>
 &lt;a href="{% url 'social:begin' "facebook" %}"&gt;Login with Facebook&lt;/a&gt;
-...
             </code></pre>
           </section>
 
-          <section>
-            <h1>Strategy</h1>
-            <h1>&</h1>
-            <h1>Storage</h1>
-          </section>
           <!--como usar python social auth-->
           <!--screens de las apps-->
           <!--codigo-->
         </section>
 
-        <section>
-          <h1>django-social-auth</h1>
-          <div id="middle">is dead, long live to</div>
-          <h1>python-social-auth</h1>
-          <!--explicacion de porque murio, o como fue que muto-->
-          <ul>
-            <li>Propósito</li>
-            <li>Features</li>
-          </ul>
+        <section id="strategy-storage">
+          <h1>Strategies & Storages</h1>
+
+          <div>
+            <div>
+              <h2>Strategy</h2>
+              <p>Es la interfáz entre el framework y la aplicación</p>
+              <p>
+                Definiendo 9 métodos se obtiene el soporte para un nuevo framework.
+                <span class="fragment"><strong>Mentira</strong>, se necesita un
+                poco más de trabajo definiendo rutas, vistas, modelos, etc.</span>
+              </p>
+            </div>
+
+            <div class="fragment">
+              <h2>Storage</h2>
+              <p>Es la interfaz la aplicación y los modelos</p>
+              <p>Aquí es donde se agrega soporte para nuevos ORMs</p>
+            </div>
+
+            <div class="fragment">
+              <h2>Configurable</h2>
+
+              <pre><code class="python">
+SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'
+SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
+              </code></pre>
+            </div>
+          </div>
         </section>
 
         <section>
-          <h1>Extendiendo PSA (Tornado)</h1>
+          <h1>Extendiendo Python Social Auth (Tornado)</h1>
         </section>
 
         <section>
           <h1>Tornado is alive!</h1>
-          <img class="fragment" src="img/zombie-hand.png"/>
+          <img src="img/zombie-hand.png"/>
         </section>
 
         <section>
           <h1>Conclusiones</h1>
         </section>
+      </div>
+
+      <div class="flow-controls">
+        <a title="Back" href="javascript:void(function(){ Reveal.left(); }());">←</a>
+        <a title="Down" href="javascript:void(function(){ Reveal.down(); }());">↓</a>
+        <a title="Up" href="javascript:void(function(){ Reveal.up(); }());">↑</a>
+        <a title="Forward" href="javascript:void(function(){ Reveal.right(); }());">→</a>
       </div>
     </div>
 
@@ -366,20 +370,17 @@ SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
     <script src="js/reveal.min.js"></script>
     <script src="js/less.js"></script>
     <script>
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
         width: '100%',
         height: '100%',
         margin: 0.1,
         minScale: 0.2,
         maxScale: 1.0,
-        controls: true,
+        controls: false,
         progress: true,
         history: true,
         center: true,
-        // theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        transition: Reveal.getQueryHash().transition || 'default',
         dependencies: [{
           src: 'js/plugin/highlight/highlight.js',
           async: true,
@@ -395,13 +396,14 @@ SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
             var img = event.fragment,
                 x = document.body.offsetHeight - img.height - 100,
                 y = document.body.offsetWidth - img.width - 100,
-                randomx = Math.floor(Math.random() * x + 1),
+                randomx = Math.floor(Math.random() * x + 1) + 40,  // 40 por el titulo
                 randomy = Math.floor(Math.random() * y + 1);
 
             img.style.float = 'left';
             img.style.position = 'absolute';
             img.style.top = randomx + 'px';
             img.style.left = randomy + 'px';
+            img.className = '';
           }
         }
       });
