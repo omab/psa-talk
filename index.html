@@ -77,19 +77,21 @@
 
         <section class="backends">
           <h1>Backends</h1>
+          <img class="fragment" src="img/logos/facebook.png" alt="facebook" title="facebook" />
+          <img class="fragment" src="img/logos/google.png" alt="google" title="google" />
+          <img class="fragment" src="img/logos/twitter.png" alt="twitter" title="twitter" />
+          <img class="fragment" src="img/logos/yahoo.png" alt="yahoo" title="yahoo" />
           <img class="fragment" src="img/logos/appsfuel.png" alt="appsfuel" title="appsfuel" />
           <img class="fragment" src="img/logos/bitbucket.png" alt="bitbucket" title="bitbucket" />
           <img class="fragment" src="img/logos/disqus.png" alt="disqus" title="disqus" />
           <img class="fragment" src="img/logos/dropbox.png" alt="dropbox" title="dropbox" />
           <img class="fragment" src="img/logos/evernote.png" alt="evernote" title="evernote" />
           <img class="fragment" src="img/logos/exacttarget_hubExchange.png" alt="exacttarget_hubExchange" title="exacttarget_hubExchange" />
-          <img class="fragment" src="img/logos/facebook.png" alt="facebook" title="facebook" />
           <img class="fragment" src="img/logos/fedora.png" alt="fedora" title="fedora" />
           <img class="fragment" src="img/logos/fitbit.png" alt="fitbit" title="fitbit" />
           <img class="fragment" src="img/logos/flickr.png" alt="flickr" title="flickr" />
           <img class="fragment" src="img/logos/foursquare.png" alt="foursquare" title="foursquare" />
           <img class="fragment" src="img/logos/github.png" alt="github" title="github" />
-          <img class="fragment" src="img/logos/google.png" alt="google" title="google" />
           <img class="fragment" src="img/logos/instagram.png" alt="instagram" title="instagram" />
           <img class="fragment" src="img/logos/linkedin.png" alt="linkedin" title="linkedin" />
           <img class="fragment" src="img/logos/live.png" alt="live" title="live" />
@@ -106,10 +108,8 @@
           <img class="fragment" src="img/logos/stocktwits.png" alt="stocktwits" title="stocktwits" />
           <img class="fragment" src="img/logos/trello.png" alt="trello" title="trello" />
           <img class="fragment" src="img/logos/twilio.png" alt="twilio" title="twilio" />
-          <img class="fragment" src="img/logos/twitter.png" alt="twitter" title="twitter" />
           <img class="fragment" src="img/logos/vk.png" alt="vk" title="vk" />
           <img class="fragment" src="img/logos/weibo.png" alt="weibo" title="weibo" />
-          <img class="fragment" src="img/logos/yahoo.png" alt="yahoo" title="yahoo" />
           <img class="fragment" src="img/logos/yandex.png" alt="yandex" title="yandex" />
         </section>
 
@@ -391,20 +391,17 @@ SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
       });
 
       Reveal.addEventListener('fragmentshown', function (event) {
-        if (event.fragment.nodeName == 'IMG') {
-          if (event.fragment.parentNode.className.indexOf('backends') >= 0) {
-            var img = event.fragment,
-                x = document.body.offsetHeight - img.height - 100,
-                y = document.body.offsetWidth - img.width - 100,
-                randomx = Math.floor(Math.random() * x + 1) + 40,  // 40 por el titulo
-                randomy = Math.floor(Math.random() * y + 1);
-
-            img.style.float = 'left';
-            img.style.position = 'absolute';
-            img.style.top = randomx + 'px';
-            img.style.left = randomy + 'px';
-            img.className = '';
-          }
+        if (event.fragment.nodeName == 'IMG' && event.fragment.parentNode.className.indexOf('backends') >= 0) {
+          var img = event.fragment;
+              // x = document.body.offsetHeight - img.height - 100,
+              // y = document.body.offsetWidth - img.width - 100,
+              // randomx = Math.floor(Math.random() * x + 1) + 40,  // 40 por el titulo
+              // randomy = Math.floor(Math.random() * y + 1);
+          // img.style.float = 'left';
+          // img.style.position = 'absolute';
+          // img.style.top = randomx + 'px';
+          // img.style.left = randomy + 'px';
+          img.className = '';
         }
       });
     </script>
