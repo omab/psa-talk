@@ -185,16 +185,33 @@ Lo siguente es configurar nuestra aplicacion para que use PSA.
     de la api del sitio.
   * Al crear la aplicacion, obtenemos una application key y application secret
     las cuales son requeridas en el settings.py.
-  * Opcionalmente se define el storage, ya que tiene siempre un storage
-    definido por defecto para cada framework. Esta es la capa de almacenamiento
-    de los datos para la autenticacion.
-  * Incluir las urls.
+  * Definir los nombres de las urls que participan en el proceso.
+  * Incluir las urls en el modulo urls.py.
     - Login
     - Complete
     - Disconect
-  * Definir los nombres de las urls que participan en el proceso.
   * Y por ultimo en nuestro template de login, agregamos el link que
     desencadena el proceso.
 
 Los dos principales conceptos con los que nos debemos quedar son Storage y 
 Backend, estas son las principales interfaces de la libreria.
+
+* Strategy: es la interfaz que sabe como manejar el framework sobre el que se esta
+  tabajando
+* Storage: interfaz entre aplicación y modelos.
+
+
+Diapositiva 7 (Extendiendo PSA Tornado)
+---------------------------------------
+
+Comenzando por los conceptos pendientes de las diapositivas anteriores,
+implementamos una Strategy para tornado que como se puede leer en los titulos
+de los metodos, la intermediacion es bastante basica.
+
+Setters y getters para session, settings, construccion de urls,
+y construccion de respuestas.
+
+Si bien tornado en particular no maneja session, se implemento usando cookies.
+Tambien hubieron works arround a la hora de construir las respuestas,
+ya que las vistas de tornado no generan retorno, se utiliza metodos sobre
+el RequestHandler

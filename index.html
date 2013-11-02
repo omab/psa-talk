@@ -278,6 +278,11 @@ AUTHENTICATION_BACKENDS = (
             </code></pre>
 
             <pre class="fragment"><code data-trim class="python">
+SOCIAL_AUTH_FACEBOOK_KEY = 'foobar'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'bazqux'
+            </code></pre>
+
+            <pre class="fragment"><code data-trim class="python">
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/logged-in/'
 SOCIAL_AUTH_LOGIN_ERROR_URL = '/login-error/'
 SOCIAL_AUTH_LOGIN_URL = '/login-url/'
@@ -285,11 +290,6 @@ SOCIAL_AUTH_NEW_USER_REDIRECT_URL = '/new-users-redirect-url/'
 SOCIAL_AUTH_NEW_ASSOCIATION_REDIRECT_URL = '/new-association-redirect-url/'
 SOCIAL_AUTH_DISCONNECT_REDIRECT_URL = '/account-disconnected-redirect-url/'
 SOCIAL_AUTH_INACTIVE_USER_URL = '/inactive-user/'
-            </code></pre>
-
-            <pre class="fragment"><code data-trim class="python">
-SOCIAL_AUTH_FACEBOOK_KEY = 'foobar'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'bazqux'
             </code></pre>
           </section>
 
@@ -332,7 +332,7 @@ urlpatterns = patterns('',
 
             <div class="fragment">
               <h2>Storage</h2>
-              <p>Es la interfaz la aplicación y los modelos</p>
+              <p>Es la interfaz entre la aplicación y los modelos</p>
               <p>Aquí es donde se agrega soporte para nuevos ORMs</p>
             </div>
 
@@ -348,7 +348,81 @@ SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
         </section>
 
         <section>
-          <h1>Extendiendo Python Social Auth (Tornado)</h1>
+          <section>
+            <h1>Extendiendo Python Social Auth (Tornado)</h1>
+            <div class="fragment">
+              <h2>Strategy</h2>
+              <pre><code data-trim class="python">
+def redirect(self, url):
+
+def get_setting(self, name):
+
+def html(self, content):
+
+def request_data(self, merge=True):
+
+def request_host(self):
+
+def session_get(self, name, default=None):
+
+def session_set(self, name, value):
+
+def session_pop(self, name):
+
+def build_absolute_uri(self, path=None):
+              </code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h1>Handlers</h1>
+            <pre><code data-trim class="python">
+class AuthHandler(tornado.web.RequestHandler):
+    def get(self, backend):
+        self._auth(backend)
+
+    def post(self, backend):
+        self._auth(backend)
+
+    @strategy("complete")
+    def _auth(self, backend):
+        do_auth(self.strategy)
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Rutas</h1>
+            <pre><code data-trim class="python">
+SOCIAL_AUTH_ROUTES = [
+    url(r"/login/(?P&lt;backend&gt;[^/]+)/?", AuthHandler, name="begin"),
+    url(r"/complete/(?P&lt;ackend&gt;^/]+)/?", CompleteHandler, name="complete"),
+    url(r"/disconnect/(?P&lt;ackend&gt;^/]+)/?", DisconnectHandler,
+        name="disconnect"),
+    url(r"/disconnect/(?P&lt;ackend&gt;^/]+)/(?P&lt;association_id&gt;\d+)/?",
+        DisconnectHandler, name="disconect_individual"),
+]
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Decorators</h1>
+            <pre><code data-trim class="python">
+def strategy(redirect_uri=None):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(self, backend, *args, **kwargs):
+            uri = redirect_uri
+            if uri and not uri.startswith('/'):
+                uri = self.reverse_url(uri, backend)
+            self.strategy = load_strategy(self,
+                                          backend=backend,
+                                          redirect_uri=uri, *args, **kwargs)
+            return func(self, backend, *args, **kwargs)
+        return wrapper
+    return decorator
+            </code></pre>
+          </section>
+
         </section>
 
         <section>
@@ -357,7 +431,7 @@ SOCIAL_AUTH_STORAGE = 'social.apps.django_app.default.models.DjangoStorage'
         </section>
 
         <section>
-          <h1>Conclusiones</h1>
+          <h1>TL;DR</h1>
         </section>
       </div>
 
