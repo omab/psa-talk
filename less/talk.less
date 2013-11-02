@@ -1,20 +1,47 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url(/fonts/Lobster.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Flamenco';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/FlamencoLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'FlamencoRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/FlamencoRegular.woff') format('woff');
+}
+
+
 body {
-    background: #eee;
-    // background: #CF0638;
-    // background: #FC354C;
-    // background: #CF4647;
-    // color: #29221F;
-    // background: url("/img/background3.jpg");
-    // background-size: cover;
+    background: #eeeeee;
+    color: #333;
+    font-family: 'FlamencoLight';
 
     a, a:visited {
-        color: blue;
+        color: #cf1e26;
         text-decoration: none;
     }
 
     pre {
         font-size: 1.5em !important;
         border: 2px solid #bbb !important;
+    }
+
+    h1 {
+        font-family: 'Lobster';
+    }
+
+    h2 {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'FlamencoRegular';
     }
 }
 
@@ -43,7 +70,7 @@ body {
         height: 12px;
 
         span {
-            background: #13daec;
+            background: #cf1e26;
         }
     }
 
@@ -60,7 +87,7 @@ body {
             color: #333;
 
             &:hover {
-                color: #13daec;
+                color: #cf1e26;
             }
         }
     }
@@ -80,6 +107,7 @@ body {
     #github-handles {
         @sep: 2em;
         font-size: 3em;
+        margin-top: 3em;
 
         span {
             display: inline-block;
@@ -100,12 +128,12 @@ body {
 }
 
 #dsa, #psa, #strategy-storage {
-    h1 {
+    .left {
         float: left;
         text-align: center;
     }
 
-    > div {
+    .right {
         display: inline-block;
         text-align: left;
 
@@ -113,8 +141,12 @@ body {
             margin-bottom: 1em;
 
             h2 {
-                border-bottom: 1px solid #333;
-                margin-bottom: .5em;
+                margin-top: .5em;
+            }
+
+            li {
+                font-size: 1.5em;
+                line-height: 1.5em;
             }
         }
     }
