@@ -47,7 +47,7 @@ body {
 
 .reveal {
     padding: 0;
-    margin: 50px 0;
+    margin: 0;
     background: fade(#eee, 20%);
 
     .slides {
@@ -57,6 +57,7 @@ body {
 
             h1 {
                 margin-bottom: 1em;
+                font-size: 5em;
             }
 
             p {
@@ -90,6 +91,10 @@ body {
                 color: #cf1e26;
             }
         }
+    }
+
+    pre code {
+        max-height: 600px;
     }
 }
 
@@ -127,34 +132,45 @@ body {
     }
 }
 
-#dsa, #psa, #strategy-storage {
-    .left {
-        float: left;
-        text-align: center;
+.dsa, .psa, #strategy-storage {
+    > p, > div > p {
+        margin-bottom: 1em;
+
+        strike {
+            position: relative;
+
+            &:after {
+                border-bottom: 3px solid #333;
+                content: "";
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 50%;
+            }
+        }
     }
 
-    .right {
-        display: inline-block;
-        text-align: left;
+    > p, > div > p, > ul > li {
+        font-size: 3em !important;
+        line-height: 1.5em !important;
+    }
+}
 
-        > div {
-            margin-bottom: 1em;
+#strategy-storage {
+    div {
+        h2 {
+            text-align: left;
+        }
 
-            h2 {
-                margin-top: .5em;
-            }
-
-            li {
-                font-size: 1.5em;
-                line-height: 1.5em;
-            }
+        p {
+            padding-left: 1em;
         }
     }
 }
 
 .backends {
     img {
-        max-width: 140px;
+        max-width: 120px;
         margin: 1em;
     }
 }
